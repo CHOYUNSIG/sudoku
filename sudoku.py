@@ -112,8 +112,11 @@ def op():
 			break
 		elif len(xy)==2 and 64<ord(xy[0])<74 and 48<ord(xy[1])<58:
 			v=input("$ Value : ")
-			if 47<ord(v)<58:
-				a[ord(xy[1])-49][ord(xy[0])-65]=int(v)+10
+			if len(v)==1 and 47<ord(v)<58:
+				if int(v)!=0:
+					a[ord(xy[1])-49][ord(xy[0])-65]=int(v)+10
+				else:
+					a[ord(xy[1])-49][ord(xy[0])-65]=0
 				if errorSearch()==1:
 					a[ord(xy[1])-49][ord(xy[0])-65]=0
 					print("$ error")
