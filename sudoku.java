@@ -20,11 +20,9 @@ public class sudoku {
                 } else if (xy.charAt(0) < 65 || xy.charAt(0) > 73 || xy.charAt(1) < 49 || xy.charAt(1) > 57) {
                     System.out.printf("Erorr. Please try again.\n");
                 } else {
-                    x = (int)xy.charAt(1) - 49;
-                    y = (int)xy.charAt(0) - 65;
+                    x = (int)xy.charAt(1) - 49; y = (int)xy.charAt(0) - 65;
                     System.out.printf("> Value : ");
-                    v = scan.nextInt();
-                    scan.nextLine();
+                    v = scan.nextInt(); scan.nextLine();
                     if (v == 0) {
                         game.a[x][y] = v;
                         System.out.printf("%c%c is removed.\n", xy.charAt(0), xy.charAt(1));
