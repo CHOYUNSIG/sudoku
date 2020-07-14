@@ -8,9 +8,7 @@ public class sudoku {
         while (true) {
             game = new gameinfo();
             String xy;
-            int x,
-            y,
-            v;
+            int x,y,v;
             int exit = 0;
             game.print();
             System.out.printf("\nPlease enter coordinate value you want to put the number.\nex) A1\nIf you are ready to get the solution, enter 0.\n");
@@ -56,12 +54,9 @@ class gameinfo {
         for (int i = 0; i < 9; i ++)
             for (int j = 0; j < 9; j ++)
                 a[i][j] = 0;
-
-
     }
     public void print() {
-        int c = 0,
-        t = 0;
+        int c = 0,t = 0;
         System.out.printf("\n | 1 2 3 | 4 5 6 | 7 8 9\n");
         for (int i3 = 0; i3 < 3; i3 ++) {
             System.out.printf("-+-------+-------+-------\n");
@@ -98,8 +93,7 @@ class op {
             if (p[0] == 9) {
                 p[0] = 0;
                 p[1]++;
-                if (p[1] == 9)
-                    return a;
+                if (p[1] == 9) return a;
             }
         }
         while (key != 1) {
@@ -109,16 +103,14 @@ class op {
                 while (a[p[0]][p[1]] > 10 || a[p[0]][p[1]] == 0) {
                     p[0]--;
                     if (p[0] < 0) {
-                        p[0] = 8;
-                        p[1]--;
+                        p[0] = 8; p[1]--;
                     }
                 }
             } else if (this.errorSearch(a) == 0) {
                 while (a[p[0]][p[1]] != 0) {
                     p[0]++;
                     if (p[0] == 9) {
-                        p[0] = 0;
-                        p[1]++;
+                        p[0] = 0; p[1]++;
                         if (p[1] == 9) {
                             key = 1;
                             break;
