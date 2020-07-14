@@ -79,19 +79,14 @@ void print() {
 	}
 }
 void sudoku() {
-	int p[2] = {
-		0, 0
-	}
-	;
-	//pivot coordinate value
+	int p[2] = {0, 0}; //pivot coordinate value
 	int key = 0;
 	while (a[p[0]][p[1]] != 0) {
 		p[0]++;
 		if (p[0] == 9) {
 			p[0] = 0;
 			p[1]++;
-			if (p[1] == 9)
-							return;
+			if (p[1] == 9) return;
 		}
 	}
 	while (key != 1) {
